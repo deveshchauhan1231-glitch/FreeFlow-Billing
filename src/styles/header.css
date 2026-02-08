@@ -1,0 +1,48 @@
+.navbar{
+    display: flex;
+    max-width: 100%;
+    height: 56px;
+    background-color:  #1563e2;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin:0;
+    padding: 8px ;
+    position: sticky;
+    top: 0;
+    
+    
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    color:white;
+}
+.navbar ul a{
+    color:white;
+    text-decoration: none;
+}
+.btn {
+  background-color: #E11D48;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 8px 16px;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #BE123C;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}

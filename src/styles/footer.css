@@ -1,0 +1,24 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 12px;
+    gap: 10px;
+    background-color:  #1563e2;
+    align-items: center;
+    color: white;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  border-radius: 12px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.footer a:hover{
+    background-color: #266fe4;
+    transform: scale(1.08);
+}

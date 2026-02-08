@@ -1,0 +1,185 @@
+.frame {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    padding: 18px 24px;
+    flex: 1;
+    
+}
+.input{
+    width: 45%;
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.items-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.items-header,
+.item-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 80px;
+  gap: 12px;
+  align-items: center;
+}
+
+.items-header {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.item-row input {
+  padding: 8px;
+}
+
+.item-row button {
+  height: 36px;
+}
+.print-area{
+  width: 50%;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+@media print {
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    margin: 0;
+    background: white;
+  }
+
+  /* Hide everything */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Show only printable area */
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+
+  /* Remove flex/layout influence */
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* Safety against overflow inside preview */
+  .print-area * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* Tables (if used in DocumentPreview) */
+  .print-area table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  .print-area td,
+  .print-area th {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 468px) {
+  .container {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .input,
+  .print-area {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+
+  /* Hide headers on mobile (optional but recommended) */
+  .items-header,
+  .tax-header {
+    display: none;
+  }
+
+  /* ITEM INPUT ROW → stacked */
+  .item-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+
+  /* TAX INPUT ROW → stacked */
+  .tax-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+
+  /* Make inputs full width */
+  .item-row input,
+  .tax-row input {
+    width: 100%;
+  }
+
+  /* Action buttons aligned nicely */
+  .item-row button,
+  .tax-row button {
+    align-self: flex-end;
+  }
+}
+
+}
+.tax-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tax-header,
+.tax-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 80px;
+  gap: 12px;
+  align-items: center;
+}
+
+.tax-header {
+  font-weight: 600;
+}
+
+
+
+
+
+
+

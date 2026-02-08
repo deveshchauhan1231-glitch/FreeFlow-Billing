@@ -1,0 +1,253 @@
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  max-width: 100%;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  gap: 1rem;
+  
+}
+
+.Hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.Hero p {
+  font-size: 1.1rem;
+  color: #475569;
+}
+
+.hero-points {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-points span {
+  
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.content{
+  background-color: #b7cce1;
+}
+
+
+
+.getStarted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.getStarted h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.getStarted p {
+  color: #475569;
+  max-width: 600px;
+  text-align: center;
+}
+
+
+.action-cards {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 960px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+
+
+.card button {
+  margin-top: auto;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.card button:active {
+  transform: scale(0.98);
+}
+
+
+.btn-invoice {
+  background: #dc2525;
+  color: #ffffff;
+}
+
+.btn-invoice:hover {
+  background: #b91c1c;
+}
+
+
+.btn-bill {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.btn-bill:hover {
+  background: #15803d;
+}
+
+
+.btn-estimate {
+  background: #ca9d3b;
+  color: #1f2933;
+}
+
+.btn-estimate:hover {
+  background: #b0892e;
+}
+
+
+
+.why {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.why h2 {
+  font-size: 1.75rem;
+}
+
+.why p {
+  max-width: 650px;
+  text-align: center;
+  color: #475569;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.why li {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .Hero {
+    padding: 3rem 1rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+.mobile-alert{
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-alert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    padding: 25px;
+    background: white;
+    color: black;
+    border: 3px solid #0070f3;
+    border-radius: 15px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    text-align: center;
+  }
+
+  .mobile-alert h2 {
+    margin: 0 0 10px 0;
+  }
+
+  .mobile-alert p {
+    margin-bottom: 20px;
+  }
+
+  .mobile-alert button {
+    padding: 10px 20px;
+    background: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
